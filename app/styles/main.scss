@@ -2,15 +2,69 @@
 // endbower
 
 .browsehappy {
-  margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0;
+    padding: 0;
+
 }
 
 body {
   padding: 0;
+  margin:0;
 }
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  -webkit-justify-content: center; /* Safari */
+  justify-content: center;
+  height: 98vh;
+  width:100%;
+
+
+}
+
+.flex-item {
+  display: flex;
+  margin:1vh;
+  background: tomato;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align:center;
+  width:33%;
+  justify-content: center;
+  flex-direction: column;
+  align-self:stretch;
+
+}
+
+.flex-vertical-item {
+    background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* Standard syntax */  height: 25%;
+    align-self: flex-end;
+    height:30px;
+    width:100%;
+  
+}
+
+.active-arrow {
+  background-image:url("../images/active-arrow.png");
+  background-size:90%;
+  background-position:top center; 
+  background-repeat:no-repeat;
+  height:300px;
+  width:100%;
+}
+
+
+
+
+
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

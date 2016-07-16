@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 /**
  * @ngdoc function
@@ -16,14 +16,14 @@ angular.module('trtDisplayApp')
   	 timeController.localTimeZoneOffsetHrs = timeController.localTime.getTimezoneOffset();
   	 console.log(timeController.localTimeZoneOffsetHrs);
 
-  	 function Clock(timezone, time){
-  	 	this.time = time;
-  	 	this.getTime = function(){ this.time = Date.now();};
+  	 function Clock(timezone){
+  	 	this.time = Date.now();
+  	 	this.getTime = function(){ timeController.localTime = Date.now();};
   	 	this.interval = 1000;
   	 	this.timezone = timezone; 
-  	 	this.activeClock = function(){return $interval( this.getTime , this.interval );};
+  	 	this.activeClock = function(){ $interval( this.getTime , this.interval );};
   	 }
 
-  	 timeController.usaOffice = new Clock('+600','');
+  	 timeController.usaOffice = new Clock('+600');
   	 timeController.usaOffice.activeClock();
   });
