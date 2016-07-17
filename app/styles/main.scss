@@ -1,3 +1,6 @@
+
+
+
 // bower:scss
 // endbower
 
@@ -11,58 +14,119 @@
 body {
   padding: 0;
   margin:0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  color: white;
 }
+
+
+//TYPOGRAPHY 
+p.time {
+  font-size: 12em;
+  margin: 0;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 6em;
+  text-transform: uppercase;
+  font-weight:100;
+  margin-top: 20px;
+}
+
+p.date{
+    border: 1px solid red;
+    width: 50%;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 2.5em;
+    text-transform: uppercase;
+
+   }
 
 .flex-container {
   padding: 0;
   margin: 0;
   display: flex;
-  -webkit-justify-content: center; /* Safari */
-  justify-content: center;
+  //-webkit-justify-content: center; /* Safari */
+  //justify-content: center;
   height: 98vh;
   width:100%;
-
-
 }
 
 .flex-item {
   display: flex;
   margin:1vh;
-  background: tomato;
+  background: #000;
   color: white;
-  font-weight: bold;
-  font-size: 3em;
   text-align:center;
   width:33%;
-  justify-content: center;
+  //justify-content: center;
   flex-direction: column;
   align-self:stretch;
+  justify-content:space-between;
+  align-items:stretch;
 
+}
+
+.test-border{
+  border: 1px solid black;
 }
 
 .flex-vertical-item {
-    background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* Standard syntax */  height: 25%;
-    align-self: flex-end;
-    height:30px;
+    display: flex; 
+    height:30%;
     width:100%;
-  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
+
+.background001 {
+  background-size: cover;
+  background-position: center;
+  background-image:url("../images/bg-ph.png");
+}
+.clock{
+    display: flex; 
+    justify-content: center;
+     align-items:center;
+
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+.tod{
+ font-size: 4em;
+ list-style: none;
+ font-weight: 400;
+
+
+ }
 
 .active-arrow {
   background-image:url("../images/active-arrow.png");
-  background-size:90%;
-  background-position:top center; 
-  background-repeat:no-repeat;
-  height:300px;
-  width:100%;
+    background-size:90%;
+    background-position:top center; 
+    background-repeat:no-repeat;
+    height:300px;
+    width:100%;
+    z-index: 3;
 }
 
 
-
-
+//Background elements
+.gradient-fade{
+    background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* Standard syntax */ 
+    z-index: 10;
+}
 
 
 
@@ -74,19 +138,7 @@ body {
   padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
 
 /* Custom page footer */
 .footer {
@@ -110,14 +162,6 @@ body {
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
